@@ -73,8 +73,9 @@ h2{
 .maps{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
-.map{
+.map {
     border: 1px solid black;
-    width: 33%;
+    width: 30%;
 }
