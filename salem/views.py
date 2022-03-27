@@ -91,6 +91,8 @@ def carMeet(request):
         'locationName': 'Walmart',
         'address': '3025 Lancaster Dr NE, Salem, OR 97305',
         'hostName': 'Wade',
+        'startTime': '7:00 PM',
+        'endTime': '11:00 PM',
         'type': 'JDM'
     }
     meet_2_Map = plot(meet2,
@@ -100,8 +102,11 @@ def carMeet(request):
         'locationName': 'Downtown Parking Garage',
         'address': '538 Liberty St NE, Salem, OR 97303',
         'hostName': 'Steve',
+        'startTime': '8:00 PM',
+        'endTime': '10:00 PM',
         'type': 'All'
     }
+
     return render(request, 'car_meets.html', {
         'meet_1_Map': meet_1_Map,
         'meet_1_Info': meet_1_Info,
