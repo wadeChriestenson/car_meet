@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salem Oregon Car Meet</title>
     <link rel="icon" type="image/x-icon"  href="{%  static  '/img/favicon.png' %}'">
+    <script src="https://cdn.plot.ly/plotly-1.58.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="{% static '/css/car_meet11111111111111111.css' %}" rel="stylesheet">
+    <link href="{% static '/css/car_meet11111111111111.css' %}" rel="stylesheet">
 </head>
 <body class="body">
     <header class="header">
@@ -25,8 +26,26 @@
             <li></li>
         </ul>
     </div>
-    <div class="top">
-        <h2>Meets Today</h2>
+    <div class="middleWrapper">
+        <div class="top">
+            <h2>Meets Today</h2>
+        </div>
+        <div class="maps">
+            <div class="map">
+                <h3>{{ meet_1_Info.locationName }}</h3>
+                <h4>{{ meet_1_Info.address }}</h4>
+                <h4>{{ meet_1_Info.hostName }}</h4>
+                <h4>{{ meet_1_Info.type }}</h4>
+                <div>{{ meet_1_Map | safe }}</div>
+            </div>
+            <div class="map">
+                <h3>{{ meet_2_Info.locationName }}</h3>
+                <h4>{{ meet_2_Info.address }}</h4>
+                <h4>{{ meet_2_Info.hostName }}</h4>
+                <h4>{{ meet_2_Info.type }}</h4>
+                <div>{{ meet_2_Map | safe }}</div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
