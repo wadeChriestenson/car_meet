@@ -35,8 +35,7 @@ h1{
     height: 100px;
     padding-left: 5px;
 }
-/****************End Head*****************/
-
+/****************End Header*****************/
 .mainWrapper{
     display: flex;
     flex-direction: row;
@@ -61,6 +60,17 @@ h2, h4, h3, h5{
     /*height: 100%;*/
     /*border: 1px solid black*/
 }
+.tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    height: 25px;
+}
+a{
+    color: black;
+    font-size: 18px;
+}
 .top{
     display: flex;
     flex-direction: row;
@@ -69,16 +79,4 @@ h2, h4, h3, h5{
 }
 h2{
     font-size: 52px;
-}
-.maps{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.map {
-    border: 1px solid black;
-    width: 30%;
-}
-h3{
-    text-decoration: underline;
 }

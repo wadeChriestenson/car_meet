@@ -1,0 +1,13 @@
+
+.maps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.map {
+    border: 1px solid black;
+    width: 30%;
+}
+h3{
+    text-decoration: underline;
+}

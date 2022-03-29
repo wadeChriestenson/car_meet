@@ -107,7 +107,7 @@ def carMeet(request):
         'type': 'All'
     }
 
-    return render(request, 'car_meets.html', {
+    return render(request, 'carmeets.html', {
         'meet_1_Map': meet_1_Map,
         'meet_1_Info': meet_1_Info,
         'meet_2_Map': meet_2_Map,
@@ -116,4 +116,13 @@ def carMeet(request):
 
 
 def setup(request):
-    return render(request, 'setupameet.html', {})
+    return render(request, 'setup.html', {})
+
+
+def aboutus(request):
+    about-us = ''
+    return render(request, 'aboutus.html', {})
+
+
+def disclaimer(request):
+    return render(request, 'disclaimer.html')
