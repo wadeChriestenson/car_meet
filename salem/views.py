@@ -113,3 +113,7 @@ def carMeet(request):
         'meet_2_Map': meet_2_Map,
         'meet_2_Info': meet_2_Info
     })
+
+
+def setup(request):
+    return render(request, 'setupameet.html', {})
