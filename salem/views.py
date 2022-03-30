@@ -122,9 +122,8 @@ def setup(request):
 def aboutus(request):
     aboutus = 'This site is dedicated to helping ' \
                'car enthusiast organize and manage local, safe and respectable ' \
-               'car meets. We are decicated to keep the car culture respectable in the community. By giving the enthusiast a place to organize and plan ahead of time. ' \
-              'We are striving to help keep car culture  safe and '
-
+               'car meets. We are decicated to keep the car culture respectable in the community. ' \
+              'By giving the enthusiast a place to organize and plan ahead of time. '
     return render(request, 'aboutus.html', {'aboutus': aboutus})
 
 
