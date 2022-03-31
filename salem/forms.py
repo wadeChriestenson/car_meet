@@ -24,11 +24,11 @@ class setupMeetInfo(forms.Form):
     meetPlace = forms.CharField(
         label='Location',
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Use the Map to Find Your Location'}))
+        widget=forms.TextInput(attrs={'id': 'meetPlace'}))
     meetAddress = forms.CharField(
         label='Address',
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Map will Auto-Fill the Address'}))
+        widget=forms.TextInput(attrs={'id': 'meetAddress'}))
     meetDescription = forms.CharField(
         label='Description',
         # max_length=100,
