@@ -24,11 +24,11 @@ class setupMeetInfo(forms.Form):
     meetPlace = forms.CharField(
         label='Location',
         max_length=100,
-        widget=forms.TextInput(attrs={'id': 'meetPlace'}))
+        widget=forms.HiddenInput(attrs={'id': 'meetPlace'}))
     meetAddress = forms.CharField(
         label='Address',
         max_length=100,
-        widget=forms.TextInput(attrs={'id': 'meetAddress'}))
+        widget=forms.HiddenInput(attrs={'id': 'meetAddress'}))
     meetDescription = forms.CharField(
         label='Description',
         # max_length=100,

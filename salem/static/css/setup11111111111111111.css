@@ -1,11 +1,13 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
+  padding: 5px;
   /*height: 100%; !important;*/
-  width: 45vw !important;
+  width: 35vw !important;
   /*margin-left: 12.5vw;*/
 }
 .formWrapper{
+  padding: 5px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -16,7 +18,22 @@
 }
 .submit{
   width: 135px;
-  margin-left: 5.5vw;
+  /*margin-top: -25vh;*/
+  margin-left: -8vw;
+  height: 50px;
+  background-color: #0A2D81;
+  border-radius: 5px 5px;
+  color: whitesmoke;
+}
+.direction{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+p{
+  font-size: 24px;
+  text-align: center;
 }
 .mapWrapper{
   display: flex;
@@ -24,7 +41,10 @@
   justify-content: space-evenly;
   width: 100vw;
 }
-
+.arrow{
+  width: 35px;
+  height: 35px;
+}
 
 #description {
   font-family: Roboto;

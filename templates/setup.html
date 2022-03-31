@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="{% static '/css/setup111111111111111111.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/setup11111111111111111.css' %}"/>
     <script src="{% static '/javascript/setup.js' %}" rel="script"></script>
           <link href="{% static '/css/header.css' %}" rel="stylesheet">
   </head>
@@ -33,11 +33,6 @@
             <h2>Set Up A Meet</h2>
         </div>
         <div class="mapWrapper">
-            <form action="/" method="post" class="formWrapper">
-    {% csrf_token %}
-    {{ form.as_table }}
-    <input type="submit" value="Submit Meet Info" class="submit">
-</form>
     <div class="pac-card" id="pac-card">
       <div>
         <div id="title">Find a Location</div>
@@ -83,6 +78,19 @@
       <span id="place-name" class="title"></span><br />
       <span id="place-address"></span>
     </div>
+            <div class="directions">
+                <p> Search a location on map by using search bar.<img src="{% static '/img/arrow-left.png' %}" class="arrow"></p>
+                <p style="margin-top: 20%">Once the location is marked on the map,
+                     complete the form<img src="{% static '/img/arrow-left.png' %}" class="arrow" style="transform: scaleX(-1)"></p>
+                <p style="margin-top: 20%">When both Items above are completed press the
+                    "Submit Meet Info" button.<img src="{% static '/img/arrow-left.png' %}" class="arrow" style="transform: rotate(270deg)"></p>
+
+            </div>
+            <form action="/" method="post" class="formWrapper">
+                {% csrf_token %}
+                {{ form.as_table }}
+                <input type="submit" value="Submit Meet Info" class="submit">
+            </form>
         </div>
     </div>
 </div>
