@@ -62,11 +62,16 @@ function initMap() {
     infowindowContent.children["place-address"].textContent =
       place.formatted_address;
     infowindow.open(map, marker);
-        latitude = (place.geometry.location.lat());
-    longitude = (place.geometry.location.lng());
-    meetPlace = place.name
-    meetAddress = place.formatted_address
+    let latitude = (place.geometry.location.lat().toFixed(3));
+    let longitude = (place.geometry.location.lng().toFixed(3));
+    let meetPlace = place.name
+    let meetAddress = place.formatted_address
     console.log(latitude, longitude, meetPlace, meetAddress)
+
+    document.getElementById('lat').value = latitude
+    document.getElementById('lng').value = longitude
+    document.getElementById('meetPlace').value = meetPlace
+    document.getElementById('meetAddress').value = meetAddress
   });
 
 

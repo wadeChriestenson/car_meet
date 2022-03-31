@@ -1,22 +1,29 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 65vh; !important;
-  width: 65vw !important;
-  margin-left: 12.5vw;
-
+  height: 50vh; !important;
+  width: 45vw !important;
+  /*margin-left: 12.5vw;*/
+}
+.formWrapper{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 20vw;
+  height: 50vh;
+  border: 1px solid black;
+}
+.submit{
+  width: 135px;
+  margin-left: 5.5vw;
 }
 .mapWrapper{
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
 }
-/* Optional: Makes the sample page fill the window. */
-/*html,*/
-/*body {*/
-/*  height: 100%; !important;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
+
 
 #description {
   font-family: Roboto;

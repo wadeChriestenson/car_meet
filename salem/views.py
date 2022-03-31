@@ -115,13 +115,15 @@ def carMeet(request):
 
 
 def setup(request):
-    return render(request, 'setup.html', {})
+    from .forms import setupMeetInfo
+    setupMeetInfo = setupMeetInfo
+    return render(request, 'setup.html', {'form': setupMeetInfo})
 
 
 def aboutus(request):
     aboutus = 'This site is dedicated to helping ' \
-               'car enthusiast organize and manage local, safe and respectable ' \
-               'car meets. We are decicated to keep the car culture respectable in the community. ' \
+              'car enthusiast organize and manage local, safe and respectable ' \
+              'car meets. We are decicated to keep the car culture respectable in the community. ' \
               'By giving the enthusiast a place to organize and plan ahead of time. '
     return render(request, 'aboutus.html', {'aboutus': aboutus})
 
