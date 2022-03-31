@@ -1,6 +1,8 @@
+html,
 .body{
 font-family: 'Dosis', sans-serif;
-overflow-x: hidden;
+/*overflow-x: hidden;*/
+ height: 100%;
 /*overflow-y: hidden;*/
 /*    height: 100vh;*/
 }
@@ -40,12 +42,13 @@ h1{
     display: flex;
     flex-direction: row;
     width: 100vw;
-    /*height: 82vh;*/
+    height: 100%;
 }
 .navBar{
     display: flex;
     flex-direction: column;
     width: 10vw;
+    height: 100%;
     background-color: whitesmoke;
 }
 h2, h4, h3, h5{
@@ -57,7 +60,7 @@ h2, h4, h3, h5{
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*height: 100%;*/
+    height: 100%;
     /*border: 1px solid black*/
 }
 .tabs{

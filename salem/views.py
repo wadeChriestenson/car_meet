@@ -17,7 +17,6 @@ def carMeet(request):
         'latitude': 44.9448,
         'longitude': -123.0355
     }
-
     meet1 = go.Figure(go.Scattermapbox(
         lat=[str(meet_1_meta['latitude'])],
         lon=[str(meet_1_meta['longitude'])],
