@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="{% static '/css/setup1111111111111111111.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/setup111111111111111111.css' %}"/>
     <script src="{% static '/javascript/setup.js' %}" rel="script"></script>
           <link href="{% static '/css/header.css' %}" rel="stylesheet">
   </head>
@@ -35,7 +35,7 @@
         <div class="mapWrapper">
             <form action="/" method="post" class="formWrapper">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_table }}
     <input type="submit" value="Submit Meet Info" class="submit">
 </form>
     <div class="pac-card" id="pac-card">
