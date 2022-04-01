@@ -62,6 +62,9 @@ h2, h4, h3, h5{
     justify-content: space-evenly;
     border-bottom: 1px solid black;
     height: 25px;
+    width: 101vw;
+    margin-left: -1vw;
+
 }
 a{
     color: black;
