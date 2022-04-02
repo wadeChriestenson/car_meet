@@ -14,8 +14,8 @@ def dataInput(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = setupMeetInfo(request.POST)
-        latitude = form['latitude'].value()
-        longitude = form['longitude'].value()
+        lat = form['latitude'].value()
+        long = form['longitude'].value()
         hostName = form['hostName'].value()
         meetPlace = form['meetPlace'].value()
         meetAddress = form['meetAddress'].value()
@@ -24,6 +24,9 @@ def dataInput(request):
         startTime = form['startTime'].value()
         endTime = form['endTime'].value()
         enthusiastType = form['enthusiastType'].value()
+
+        latitude = str(lat)
+        longitude = str(long)
 
         print(
             latitude,
@@ -40,32 +43,7 @@ def dataInput(request):
         conn = sqlite3.connect('db.sqlite3')
         cursor = conn.cursor()
         print("Successfully Connected to SQLite")
-        meet = """INSERT INTO salem_meetinfo(
-        'latitude',
-        'longitude',
-        'hostName',
-        'meetPlace',
-        'meetAddress',
-        'meetDescription',
-        'meetDate',
-        'startTime',
-        'endTime',
-        'enthusiastType')
-            VALUES(
-            latitude,
-            longitude,
-            hostName,
-            meetPlace,
-            meetAddress,
-            meetDescription,
-            meetDate,
-            startTime,
-            endTime,
-            enthusiastType)"""
-        submit = cursor.execute(meet)
-        conn.commit()
-        print("Record inserted successfully into SqliteDb_developers table ", cursor.rowcount)
-        cursor.close()
+
 
 
         response = redirect('/')

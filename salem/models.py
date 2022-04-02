@@ -1,14 +1,16 @@
 from django.db import models
+
 enthusiastChoices = (
     ("1", "JDM"),
     ("2", "USDM"),
     ("3", "EDM"),
 )
 
+
 # Create your models here.
 class meetInfo(models.Model):
-    latitude = models.FloatField(max_length=10)
-    longitude = models.FloatField(max_length=10)
+    latitude = models.CharField(max_length=10)
+    longitude = models.CharField(max_length=10)
     hostName = models.CharField(max_length=100)
     meetPlace = models.CharField(max_length=100)
     meetAddress = models.CharField(max_length=100)
