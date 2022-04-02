@@ -40,9 +40,9 @@ def dataInput(request):
             endTime,
             enthusiastType)
 
-        conn = sqlite3.connect('db.sqlite3')
-        cursor = conn.cursor()
-        print("Successfully Connected to SQLite")
+
+        meetInfo =
+
 
 
 

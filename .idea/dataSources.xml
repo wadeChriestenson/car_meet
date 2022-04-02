@@ -13,5 +13,12 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="ddpaqv78jkolb5@ec2-52-73-155-171.compute-1.amazonaws.com" uuid="14528abd-e4b6-4c89-877c-8d61d76c1a78">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/ddpaqv78jkolb5</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'car_meet.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddpaqv78jkolb5',
+        'USER': 'iniauokddcfksr',
+        'PASSWORD': 'c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c',
+        'HOST': 'ec2-52-73-155-171.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
