@@ -10,25 +10,47 @@ from salem.forms import setupMeetInfo
 
 
 def dataInput(request):
+    import psycopg2
+    conn = psycopg2.connect(
+        host="ec2-52-73-155-171.compute-1.amazonaws.com",
+        database="ddpaqv78jkolb5",
+        user="iniauokddcfksr",
+        password="c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c")
+    cur = conn.cursor()
+    # execute a statement
+    print('Connected PostgreSQL')
+
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = setupMeetInfo(request.POST)
         lat = form['latitude'].value()
         long = form['longitude'].value()
-        hostName = form['hostName'].value()
-        meetPlace = form['meetPlace'].value()
-        meetAddress = form['meetAddress'].value()
-        meetDescription = form['meetDescription'].value()
-        meetDate = form['meetDate'].value()
-        startTime = form['startTime'].value()
-        endTime = form['endTime'].value()
-        enthusiastType = form['enthusiastType'].value()
+        hostName = form['host_name'].value()
+        meetPlace = form['meet_place'].value()
+        meetAddress = form['meet_address'].value()
+        meetDescription = form['meet_description'].value()
+        meetDate = form['meet_date'].value()
+        startTime = form['start_time'].value()
+        endTime = form['end_time'].value()
+        enthusiastType = form['enthusiast_type'].value()
 
         latitude = str(lat)
         longitude = str(long)
 
-        print(
+        meetinfo = """INSERT INTO salem_meetinfo(
+            latitude,
+            longitude,
+            host_name,
+            meet_place,
+            meet_address,
+            meet_description,
+            meet_date,
+            start_time,
+            end_time,
+            enthusiast_type)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+        meet = (
             latitude,
             longitude,
             hostName,
@@ -39,22 +61,28 @@ def dataInput(request):
             startTime,
             endTime,
             enthusiastType)
-
-
-        meetInfo =
-
-
-
-
+        cur.execute(meetinfo, meet)
+        conn.commit()
+        # close communication with the database
+        cur.close()
+        conn.close()
         response = redirect('/')
         return response
 
 
 def carMeet(request):
+
+    import psycopg2
+    conn = psycopg2.connect(
+        host="ec2-52-73-155-171.compute-1.amazonaws.com",
+        database="ddpaqv78jkolb5",
+        user="iniauokddcfksr",
+        password="c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c")
+    cur = conn.cursor()
+    # execute a statement
+    print('Connected PostgreSQL')
+
     mapbox_access_token = 'pk.eyJ1Ijoid2FkZTEyOSIsImEiOiJja2Q0bW1pYXkxaWszMnFtdHpyNGh6MHBjIn0.T7KO_vcHJuW40biVeCIUGQ'
-    sqliteConnection = sqlite3.connect('db.sqlite.db')
-    cursor = sqliteConnection.cursor()
-    print("Successfully Connected to SQLite")
 
     meet_1_meta = {
         'name': ['Walmart Meet'],

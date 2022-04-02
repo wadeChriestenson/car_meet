@@ -17,28 +17,28 @@ class setupMeetInfo(forms.Form):
     longitude = forms.FloatField(
         max_value=99.999,
         widget=forms.HiddenInput(attrs={'id': 'lng'}))
-    hostName = forms.CharField(
+    host_name = forms.CharField(
         label='Name',
         max_length=100,
         widget=forms.TextInput(attrs={'placeholder': 'Enter your name or car club name'}))
-    meetPlace = forms.CharField(
+    meet_place = forms.CharField(
         label='Location',
         max_length=100,
         widget=forms.HiddenInput(attrs={'id': 'meetPlace'}))
-    meetAddress = forms.CharField(
+    meet_address = forms.CharField(
         label='Address',
         max_length=100,
         widget=forms.HiddenInput(attrs={'id': 'meetAddress'}))
-    meetDescription = forms.CharField(
+    meet_description = forms.CharField(
         label='Description',
         # max_length=100,
         widget=forms.Textarea(attrs={'placeholder': 'Examples: Meet at north end of lot, No-Burnouts, Etc..'}))
-    meetDate = forms.DateField(
+    meet_date = forms.DateField(
         label='Meet Date',
         widget=NumberInput(attrs={'type': 'date'}))
-    startTime = forms.TimeField(widget=TimePickerInput)
-    endTime = forms.TimeField(widget=TimePickerInput)
-    enthusiastType = forms.ChoiceField(
+    start_time = forms.TimeField(widget=TimePickerInput)
+    end_time = forms.TimeField(widget=TimePickerInput)
+    enthusiast_type = forms.ChoiceField(
         label='Enthusiast Type',
         choices=enthusiastChoices,
         widget=forms.CheckboxSelectMultiple)
