@@ -1,11 +1,57 @@
-from django.shortcuts import render
+import sqlite3
+
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
 import plotly.graph_objects as go
 from plotly.offline import plot
 
-
 # Create your views here.
+from salem.forms import setupMeetInfo
+
+
+def dataInput(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = setupMeetInfo(request.POST)
+        latitude = form['latitude'].value()
+        longitude = form['longitude'].value()
+        hostName = form['hostName'].value()
+        meetPlace = form['meetPlace'].value()
+        meetAddress = form['meetAddress'].value()
+        meetDescription = form['meetDescription'].value()
+        meetDate = form['meetDate'].value()
+        startTime = form['startTime'].value()
+        endTime = form['endTime'].value()
+        enthusiastType = form['enthusiastType'].value()
+
+        print(
+            latitude,
+            longitude,
+            hostName,
+            meetPlace,
+            meetAddress,
+            meetDescription,
+            meetDate,
+            startTime,
+            endTime,
+            enthusiastType)
+
+        conn = sqlite3.connect('db.sqlite.db')
+        cursor = conn.cursor()
+        print("Successfully Connected to SQLite")
+        print(cursor)
+
+
+        response = redirect('/')
+        return response
+
+
 def carMeet(request):
     mapbox_access_token = 'pk.eyJ1Ijoid2FkZTEyOSIsImEiOiJja2Q0bW1pYXkxaWszMnFtdHpyNGh6MHBjIn0.T7KO_vcHJuW40biVeCIUGQ'
+    sqliteConnection = sqlite3.connect('db.sqlite.db')
+    cursor = sqliteConnection.cursor()
+    print("Successfully Connected to SQLite")
 
     meet_1_meta = {
         'name': ['Walmart Meet'],
@@ -116,7 +162,7 @@ def carMeet(request):
 
 def setup(request):
     from .forms import setupMeetInfo
-    setupMeetInfo = setupMeetInfo
+    setupMeetInfo = setupMeetInfo()
     return render(request, 'setup.html', {'form': setupMeetInfo})
 
 

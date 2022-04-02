@@ -88,7 +88,7 @@
                 <img src="{% static '/img/arrow-left.png' %}" class="arrow" style="transform: rotate(270deg); margin-left: 50%">
 
             </div>
-            <form action="/" method="post" class="formWrapper">
+            <form action="redirect.html" method="post" class="formWrapper">
                 {% csrf_token %}
                 {{ form.as_table }}
                 <input type="submit" value="Submit Meet Info" class="submit">
