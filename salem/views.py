@@ -81,6 +81,16 @@ def carMeet(request):
     cur = conn.cursor()
     # execute a statement
     print('Connected PostgreSQL')
+    getMeets = """SELECT * FROM salem_meetinfo ORDER BY meet_date"""
+    cur.execute(getMeets)
+    meets = cur.fetchall()
+    for x in meets:
+        print(x)
+    conn.commit()
+    # close communication with the database
+
+
+
 
     mapbox_access_token = 'pk.eyJ1Ijoid2FkZTEyOSIsImEiOiJja2Q0bW1pYXkxaWszMnFtdHpyNGh6MHBjIn0.T7KO_vcHJuW40biVeCIUGQ'
 
@@ -182,7 +192,8 @@ def carMeet(request):
         'endTime': '10:00 PM',
         'type': 'All'
     }
-
+    cur.close()
+    conn.close()
     return render(request, 'carmeets.html', {
         'meet_1_Map': meet_1_Map,
         'meet_1_Info': meet_1_Info,
