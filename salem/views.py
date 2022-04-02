@@ -37,10 +37,35 @@ def dataInput(request):
             endTime,
             enthusiastType)
 
-        conn = sqlite3.connect('db.sqlite.db')
+        conn = sqlite3.connect('db.sqlite3')
         cursor = conn.cursor()
         print("Successfully Connected to SQLite")
-        print(cursor)
+        meet = """INSERT INTO salem_meetinfo(
+        'latitude',
+        'longitude',
+        'hostName',
+        'meetPlace',
+        'meetAddress',
+        'meetDescription',
+        'meetDate',
+        'startTime',
+        'endTime',
+        'enthusiastType')
+            VALUES(
+            latitude,
+            longitude,
+            hostName,
+            meetPlace,
+            meetAddress,
+            meetDescription,
+            meetDate,
+            startTime,
+            endTime,
+            enthusiastType)"""
+        submit = cursor.execute(meet)
+        conn.commit()
+        print("Record inserted successfully into SqliteDb_developers table ", cursor.rowcount)
+        cursor.close()
 
 
         response = redirect('/')
