@@ -121,7 +121,7 @@ def carMeet(request):
                     lon=meet_meta['longitude']
                 ),
                 pitch=0,
-                zoom=12,
+                zoom=14,
                 style='streets',
             ),
             margin=dict(

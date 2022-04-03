@@ -2,11 +2,13 @@
 .outer_maps{
     display: flex;
 flex-direction: column;
-    /*width: 100vw;*/
+    width: 100vw;
 }
 .inner_maps{
     display: flex;
     flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
 }
 .info_wrapper{
     display: flex;
@@ -28,7 +30,7 @@ flex-direction: column;
 }
 .map{
     border-bottom: 2px solid black;
-    border-left: 2px solid black;
+    border-right: 2px solid black;
     border-top: 2px solid black;
 }
 
