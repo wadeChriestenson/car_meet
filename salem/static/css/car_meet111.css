@@ -7,18 +7,20 @@ flex-direction: column;
 .inner_maps{
     display: flex;
     flex-direction: row;
-    width: 90%;
-    margin-left: 5%;
+    width: 60%;
+    margin-left: 20%;
 }
 .info_wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 40%;
 }
 .mapWrap{
         display: flex;
     flex-direction: column;
         justify-content: space-between;
+    width: 60%;
 }
 .info {
 
