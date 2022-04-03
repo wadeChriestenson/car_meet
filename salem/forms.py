@@ -12,10 +12,10 @@ enthusiastChoices = (
 
 class setupMeetInfo(forms.Form):
     latitude = forms.FloatField(
-        max_value=999.999,
+        max_value=999.9999,
         widget=forms.HiddenInput(attrs={'id': 'lat'}))
     longitude = forms.FloatField(
-        max_value=99.999,
+        max_value=99.9999,
         widget=forms.HiddenInput(attrs={'id': 'lng'}))
     host_name = forms.CharField(
         label='Name',

@@ -142,7 +142,7 @@ def carMeet(request):
         allMeetsMaps.append(plot(meet,
                                  output_type='div',
                                  include_plotlyjs=False))
-        print(allMeetsMaps)
+        # print(allMeetsMaps)
 
     cur.close()
     conn.close()
