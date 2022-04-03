@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 import plotly.graph_objects as go
 from plotly.offline import plot
+from datetime import date
+
+
 
 # Create your views here.
 from salem.forms import setupMeetInfo
@@ -31,7 +34,6 @@ def dataInput(request):
         startTime = form['start_time'].value()
         endTime = form['end_time'].value()
         enthusiastType = form['enthusiast_type'].value()
-
         latitude = str(lat)
         longitude = str(long)
 
@@ -69,6 +71,13 @@ def dataInput(request):
 
 def carMeet(request):
     import psycopg2
+    today = date.today()
+    d1 = today.strftime("%Y%m%d")
+    print(d1)
+    year = today.strftime("%Y")
+    month = today.strftime("%m")
+    day = today.strftime("%d")
+    print(year,'-',month,'-',day)
     conn = psycopg2.connect(
         host="ec2-52-73-155-171.compute-1.amazonaws.com",
         database="ddpaqv78jkolb5",
@@ -77,13 +86,15 @@ def carMeet(request):
     cur = conn.cursor()
     # execute a statement
     print('Connected PostgreSQL')
-    getMeets = """SELECT * FROM salem_meetinfo ORDER BY meet_date"""
+    getMeets = f"""SELECT * 
+    FROM salem_meetinfo 
+    ORDER BY meet_date"""
     cur.execute(getMeets)
     meets = cur.fetchall()
     allMeetsMaps = []
     allMeetsMeta = []
     for x in meets:
-        print(x)
+        # print(x)
 
         mapbox_access_token = 'pk.eyJ1Ijoid2FkZTEyOSIsImEiOiJja2Q0bW1pYXkxaWszMnFtdHpyNGh6MHBjIn0.T7KO_vcHJuW40biVeCIUGQ'
 
