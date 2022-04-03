@@ -1,9 +1,11 @@
 
 .maps{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
+    justify-content: space-evenly;
 }
+
 .info{
     display: flex;
     flex-direction: row;
@@ -20,11 +22,12 @@
         border-left: 1px solid black;
         border-right: 1px solid black;
         border-bottom: 1px solid black;
-    width: 30%;
+        width: 50%;
+        padding: 5px;
 }
 .mapinfo {
         /*border: 1px solid black;*/
-    width: 30%;
+    width: 50%;
         border-left: 1px solid black;
     border-right: 1px solid black;
     border-top: 1px solid black;
