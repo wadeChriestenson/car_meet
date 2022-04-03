@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="{% static '/css/car_meet11111.css' %}" rel="stylesheet">
+    <link href="{% static '/css/car_meet111.css' %}" rel="stylesheet">
     <link href="{% static '/css/header1.css' %}" rel="stylesheet">
 
 </head>
@@ -33,10 +33,13 @@
             <h2>Upcoming Meets</h2>
         </div>
 
-        <div class="maps">
-        <div class="info">
-                {% for info in meet_Info  %}
-            <div class="mapinfo">
+        <div class="outer_maps">
+        <div class="inner_maps">
+
+<div class="info_wrapper">
+{% for info in meet_Info  %}
+                                                <div class="info">
+
                 <h3>{{ info.locationName }}</h3>
                 <h4>Address: {{ info.address }}</h4>
                 <h4>Host: {{ info.hostName }}</h4>
@@ -45,16 +48,17 @@
                 <h4>End Time: {{ info.endTime }}</h4>
                 <h4>Enthusiast Type: {{ info.type }}</h4>
                 <h4>Description: {{ info.desc }}</h4>
-                    </div>
-                                                                     {% endfor %}
-                </div>
-                <div class="mapWrap">
-                        {%  for map in meet_Map %}
-                             <div class="map">
-                                 <div>{{ map | safe }}</div>
-                            </div>
-                                                       {%  endfor %}
-                </div>
+                                                        </div>
+              {% endfor %}
+</div>
+         <div class="mapWrap">
+{%  for map in meet_Map %}
+             <div class="map">
+                 {{ map | safe }}
+             </div>
+ {%  endfor %}
+        </div>
+            </div>
         </div>
     </div>
 </div>
