@@ -1,7 +1,3 @@
-import json
-import sqlite3
-
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 import plotly.graph_objects as go
 from plotly.offline import plot
@@ -119,7 +115,7 @@ def carMeet(request):
             hovermode='closest',
             mapbox=dict(
                 accesstoken=mapbox_access_token,
-                bearing=0,
+                bearing=5,
                 center=dict(
                     lat=meet_meta['latitude'],
                     lon=meet_meta['longitude']
@@ -133,7 +129,7 @@ def carMeet(request):
                 r=0,
                 b=0,
                 t=0,
-                pad=4
+                # pad=4
             ),
         )
 
