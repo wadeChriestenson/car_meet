@@ -13,20 +13,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="ddpaqv78jkolb5@ec2-52-73-155-171.compute-1.amazonaws.com" uuid="14528abd-e4b6-4c89-877c-8d61d76c1a78">
+    <data-source source="LOCAL" name="d1mkh8c9svu1sf@ec2-3-230-122-20.compute-1.amazonaws.com" uuid="92f85b82-6851-4387-8666-0a321bc48a79">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/ddpaqv78jkolb5</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="Django default" uuid="223b6958-1510-425e-a60b-03f2f456b683">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/car_meet/settings.py</remarks>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/ddpaqv78jkolb5</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-3-230-122-20.compute-1.amazonaws.com:5432/d1mkh8c9svu1sf</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

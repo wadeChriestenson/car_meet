@@ -12,10 +12,10 @@ from salem.forms import setupMeetInfo
 def dataInput(request):
     import psycopg2
     conn = psycopg2.connect(
-        host="ec2-52-73-155-171.compute-1.amazonaws.com",
-        database="ddpaqv78jkolb5",
-        user="iniauokddcfksr",
-        password="c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c")
+        host="ec2-3-230-122-20.compute-1.amazonaws.com",
+        database="d1mkh8c9svu1sf",
+        user="wuylkrfgcaxhyr",
+        password="90abe53c83b6d4d00742a49eb76ffee232edc1fea66b3c70a3bda448c748e802")
     cur = conn.cursor()
     # execute a statement
     print('Connected PostgreSQL')
@@ -79,10 +79,10 @@ def carMeet(request):
     day = today.strftime("%d")
     print(year,'-',month,'-',day)
     conn = psycopg2.connect(
-        host="ec2-52-73-155-171.compute-1.amazonaws.com",
-        database="ddpaqv78jkolb5",
-        user="iniauokddcfksr",
-        password="c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c")
+        host="ec2-3-230-122-20.compute-1.amazonaws.com",
+        database="d1mkh8c9svu1sf",
+        user="wuylkrfgcaxhyr",
+        password="90abe53c83b6d4d00742a49eb76ffee232edc1fea66b3c70a3bda448c748e802")
     cur = conn.cursor()
     # execute a statement
     type = """SELECT meet_date FROM salem_meetinfo"""
