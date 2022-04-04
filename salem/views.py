@@ -175,7 +175,8 @@ def aboutus(request):
               'car enthusiast organize and manage local, safe and respectable ' \
               'car meets. We are decicated to keep the car culture respectable in the community. ' \
               'By giving the enthusiast a place to organize and plan ahead of time. '
-    return render(request, 'aboutus.html', {'aboutus': aboutus})
+    email = 'mailto:salemcarmeet@gmail.com'
+    return render(request, 'aboutus.html', {'aboutus': aboutus, 'email': email})
 
 
 def disclaimer(request):
