@@ -9,8 +9,8 @@ enthusiastChoices = (
 
 # Create your models here.
 class meetInfo(models.Model):
-    latitude = models.CharField(max_length=10)
-    longitude = models.CharField(max_length=10)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
     host_name = models.CharField(max_length=100)
     meet_place = models.CharField(max_length=100)
     meet_address = models.CharField(max_length=100)

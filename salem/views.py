@@ -34,8 +34,8 @@ def dataInput(request):
         startTime = form['start_time'].value()
         endTime = form['end_time'].value()
         enthusiastType = form['enthusiast_type'].value()
-        latitude = str(lat)
-        longitude = str(long)
+        latitude = lat
+        longitude = long
 
         meetinfo = """INSERT INTO salem_meetinfo(
             latitude,
@@ -104,8 +104,8 @@ def carMeet(request):
         mapbox_access_token = 'pk.eyJ1Ijoid2FkZTEyOSIsImEiOiJja2Q0bW1pYXkxaWszMnFtdHpyNGh6MHBjIn0.T7KO_vcHJuW40biVeCIUGQ'
 
         meet_meta = {
-            'latitude': float(x[1]),
-            'longitude': float(x[2]),
+            'latitude': x[1],
+            'longitude': x[2],
             'locationName': x[4],
             'address': x[5],
             'hostName': x[3],
@@ -117,8 +117,8 @@ def carMeet(request):
         }
 
         meet = go.Figure(go.Scattermapbox(
-            lat=[str(meet_meta['latitude'])],
-            lon=[str(meet_meta['longitude'])],
+            lat=[meet_meta['latitude']],
+            lon=[meet_meta['longitude']],
             mode='markers',
             marker=go.scattermapbox.Marker(
                 size=25
