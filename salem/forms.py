@@ -4,9 +4,9 @@ from django.forms import NumberInput
 from salem.widget import TimePickerInput
 
 enthusiastChoices = (
-    ("1", "JDM"),
-    ("2", "USDM"),
-    ("3", "EDM"),
+    ("JDM", "JDM"),
+    ("UDSM", "USDM"),
+    ("EDM", "EDM")
 )
 
 

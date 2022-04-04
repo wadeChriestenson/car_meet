@@ -85,6 +85,11 @@ def carMeet(request):
         password="c456dc5ea81d859e43f0b1b87edd953d4856a505ed40f6b53d91fca3368faa2c")
     cur = conn.cursor()
     # execute a statement
+    type = """SELECT meet_date FROM salem_meetinfo"""
+    cur.execute(type)
+    types = cur.fetchall()
+    for x in types:
+        print(x)
     print('Connected PostgreSQL')
     getMeets = f"""SELECT * 
     FROM salem_meetinfo 

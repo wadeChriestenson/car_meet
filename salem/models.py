@@ -1,9 +1,9 @@
 from django.db import models
 
 enthusiastChoices = (
-    ("JDM", "JDM"),
-    ("USDM", "USDM"),
-    ("EDM", "EDM"),
+    ('JDM', "JDM"),
+    ('USDM', "USDM"),
+    ("EDM", 'EDM'),
 )
 
 

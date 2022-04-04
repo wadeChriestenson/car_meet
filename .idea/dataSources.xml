@@ -20,5 +20,14 @@
       <jdbc-url>jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/ddpaqv78jkolb5</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="223b6958-1510-425e-a60b-03f2f456b683">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/car_meet/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-52-73-155-171.compute-1.amazonaws.com:5432/ddpaqv78jkolb5</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
