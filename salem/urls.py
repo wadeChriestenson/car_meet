@@ -8,5 +8,5 @@ urlpatterns = [
     path('aboutus.html', views.aboutus, name='aboutus'),
     path('disclaimer.html', views.disclaimer, name='disclaimer'),
     path('redirect.html', views.dataInput, name='redirect')
-    path("robots.txt",TemplateView.as_view(template_name="templates/robots.txt", content_type="text/plain")),  #add the robots.txt file
+#     path("robots.txt",TemplateView.as_view(template_name="templates/robots.txt", content_type="text/plain")),  #add the robots.txt file
 ]
