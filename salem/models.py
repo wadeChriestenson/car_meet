@@ -18,4 +18,4 @@ class meetInfo(models.Model):
     meet_date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
-    enthusiast_type = models.CharField(max_length=1, choices=enthusiastChoices)
+    enthusiast_type = models.CharField(max_length=15, choices=enthusiastChoices)
